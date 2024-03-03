@@ -1,0 +1,199 @@
+/*Bài 1*/
+.logo-vt > img {
+    height: 200px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+.text-vt {
+  text-align: center;
+}
+.text-vt strong{
+    color:rgb(15, 108, 238)
+}
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.luachon{
+    text-align: center;
+}
+.luachon > button {
+    padding: 10px 20px;
+    background-color: rgb(26, 61, 132);
+    color: rgb(255, 255, 255);
+    align-content: center;
+    text-justify: center;
+    border-radius: 5px;
+}
+.luachon .N > span{
+    font-size: 25px;
+    vertical-align: middle;
+}
+.luachon  button:hover {
+  background-color: #021a91; 
+}
+/*Bài 2*/
+.bai2{
+    width: 50%; 
+    display: inline-block;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+.baitag .tag button {
+    background-color: #75e227;
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+} 
+.baitag .tag  button:hover {
+    background-color: #00b312; 
+}
+/*Bài 3*/
+.tragung h1{
+  text-align: center;
+}
+.img-tragung > img {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+.text-tragung{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+.tragung button {
+    background-color: #05909a; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 450px;
+    margin-right: 200px;
+}
+.tragung button:hover {
+    background-color: #028f7c; 
+    color: azure;
+}
+/* Bài 4 */
+.thumoi {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.icon > span {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+}
+.text-email {
+    text-align: center;
+}
+.email-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  .email-input input[type="email"] {
+    width: 60%;
+    height: 50px;
+    padding:10px 20px;
+    font-size: 15px;
+    border: #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.email-input input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.5);
+}
+.send-thumoi-button {
+    padding:20px 40px;
+    font-size: 15px;
+    background-color: #0d70db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.send-thumoi-button:hover {
+    background-color: #07488d;
+}
+/* Bài 5 */
+.coffee{
+    position: relative;
+    text-align: center;
+}
+.coffee img {
+   width: 80%;
+    height: 400px;
+}
+.coffee h2{
+    text-align: center;
+}
+.text-coffee {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial;
+}
+.text-coffee p {
+    font-size: 25 px;
+}
+.text-coffee a {
+    display: inline-block;
+    background-color: #e74925;
+    color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.text-coffee a:hover {
+  background-color: #d12c0f;
+}
+/* Bài 6 */
+#flex.bg{
+    display: flex;
+    gap: 20px 70px;
+}
+.bg {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    padding: 30px;
+
+}
+.bg-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bg-text {
+    color: #fbff16;
+    font-size: 20px;
+}
+.bg-number {
+    color: #ffffff;
+    font-size: 50px;
+}
+  
