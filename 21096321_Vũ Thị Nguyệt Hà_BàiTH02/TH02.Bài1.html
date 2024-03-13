@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GIẢI PHƯƠNG TRÌNH</title>
+    <link rel="stylesheet" href="TH02.Bài1.style.css">
+<body>
+    <div class="container">
+        <h1>GIẢI PHƯƠNG TRÌNH BẬC I</h1>
+        <div class="input-group">
+            <input type="number" id="input-a" placeholder="Hệ số a">
+            <br>
+            <input type="number" id="input-b" placeholder="Hệ số b">
+        </div>
+        <button class="btn" onclick="giaiPhuongTrinh()">Giải phương trình</button>
+        <div class="result" id="result"></div>    
+    </div>
+
+    <script>
+        function giaiPhuongTrinh() {
+            var a = parseFloat(document.getElementById('input-a').value);
+            var b = parseFloat(document.getElementById('input-b').value);
+            var resultEl = document.getElementById('result');
+
+            if (a === 0) {
+                if (b === 0) {
+                    resultEl.innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    resultEl.innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                var x = -b / a;
+                resultEl.innerHTML = "Nghiệm của phương trình là x = " + x;
+            }
+        }
+    </script>
+</body>
+</html>

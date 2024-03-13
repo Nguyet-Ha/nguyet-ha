@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIÊN HỆ</title>
+    <link rel="stylesheet" href="TH02.Bài3.style.css">
+    <script src="https://kit.fontawesome.com/c1eca7f8b3.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <h1>LIÊN HỆ</h1>
+    <hr>
+<div id="container">
+    <div id="left">
+        <h2>Thông tin</h2>
+        <p><i class="fa-solid fa-location-dot"></i> Kp 6, P.Linh Trung, Tp. Thủ Đức, Tp. HCM</p>
+        <p><i class="fa-regular fa-envelope"></i>  info@uit.edu.vn</p>
+        <p><i class="fa-solid fa-phone"></i> +84 28 372 52002</p>
+    </div>
+    <div id="right">
+        <form name="form_LH">
+            <h2> <strong>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</strong></h2>
+            <input type="text" name="name" placeholder="Họ và Tên"><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <input type="text" name="title" placeholder="Tiêu đề bài viết"><br>
+            <textarea name="content" placeholder="Nội dung cần gửi"></textarea><br>
+            <div class="icon">
+            <input type="submit" value="Gửi tin nhắn" onClick="GTN()">
+            <i class="fa-regular fa-circle-check" id="icon"></i>
+            </div>
+        </form> 
+    </div>
+<script>
+    function GTN(){
+        var name = document.forms["form_LH"]["name"].value;
+        var email=document.forms["form_LH"]["email"].value;
+        var title=document.forms["form_LH"]["title"].value;
+        var content=document.forms["form_LH"]["content"].value;
+        var object={
+            name:name,
+            email:email,
+            title:title,
+            content:content
+        }
+        confirm(object.name + "\n" + object.email + "\n" + object.title + "\n" + object.content);
+    }
+</script>
+</div>
+</body>
+</html>
