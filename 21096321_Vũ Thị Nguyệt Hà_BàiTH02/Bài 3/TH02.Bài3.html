@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 3</title>
+    <link rel="stylesheet" href="TH02.Bài3.style.css">
+    <script src="https://kit.fontawesome.com/c1eca7f8b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>LIÊN HỆ</h1>
+    <hr>
+<div class="container">
+    <div class="left">
+        <h2>Thông tin</h2>
+        <p><i class="fa-solid fa-location-dot"></i> Kp 6, P.Linh Trung, Tp. Thủ Đức, Tp. HCM</p>
+        <p><i class="fa-regular fa-envelope"></i>  info@uit.edu.vn</p>
+        <p><i class="fa-solid fa-phone"></i> +84 28 372 52002</p>
+    </div>
+    <div class="right">
+        <form action="#" method="post">
+            <h2> <strong>Hãy liên lạc với chúng tôi bất cứ khi nào!!!</strong></h2>
+            <input type="text" id="name" placeholder="Họ và Tên" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="title" placeholder="Tiêu đề bài viết" required>
+            <textarea id="content" placeholder="Nội dung cần gửi" required></textarea>
+            <button class="btn" onClick="LL()">Gửi tin nhắn <i class="fa-regular fa-circle-check" id="icon"></i>
+            </button>
+
+        </form>
+    </div>
+<script>
+    function LL(){
+        var name= document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var title=document.getElementById("title").value;
+        var content=document.getElementById("content").value;
+        var object ={
+            name:name,
+            email:email,
+            title:title,
+            content:content
+        }
+        confirm(object.name + "\n" + object.email + "\n" + object.title + "\n" + object.content);
+    }
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 5</title>
+    <link rel="stylesheet" href="TH02.Bài5.style.css">
+    <script src="https://kit.fontawesome.com/c1eca7f8b3.js" crossorigin="anonymous"></script></head>
+    <body>
+        <div class="container">
+    <form name="Login" method="post">
+        <div class="left">
+        <h1><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</h1>
+            <div class="input-group1">
+            <input type="text" id="username" placeholder="Tên đăng nhập"> 
+            <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-group2">
+            <input type="password" id="pass" placeholder="Mật khẩu">
+            <span  onClick="login()"><i class="fa-solid fa-key"></i></span>
+            </div>
+        </div>
+            <div class="right">
+              <button><i class="fa-solid fa-lock"></i></i>    
+            </div>
+      </form>
+    </div>
+      <script>
+      function login(){
+    var name=document.getElementById("username").value;
+    var password=document.getElementById("pass").value;
+    console.log(name,password);
+    var object={
+        name:name,
+        password:password,
+    }
+    confirm("Bạn muốn hiện mật khẩu");
+}
+      </script>
+    </div>
+</body>
+</html>
