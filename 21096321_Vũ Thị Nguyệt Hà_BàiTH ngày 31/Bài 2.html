@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c1eca7f8b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--Bài 2-->
+    <div class="tieude">
+        <h1>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+        <p>Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng Việt có dấu</p>
+        <p>Các đóng góp ý kiến nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)</p>    
+    </div>
+    <div class="container">
+        <form action="#" method="post">
+            <div class="input-group">
+                <div class="container2">
+                    <input type="text" id="name" placeholder="Họ và Tên" required>
+                    <input type="tel" id="tel" placeholder="Số điện thoại" required>
+                    <input type="email" id="E_mail" placeholder="Email" required>
+                    <select id="customer_type" required>
+                        <option value="" disabled selected>Chọn loại khách hàng</option>
+                        <option value="VVIP">VVIP</option>
+                        <option value="Regular">Regular</option>
+                        <option value="New">New</option>
+                    </select>
+                    <input type="text" id="id_card" placeholder="Mã thẻ" required>
+                    <input type="text" id="id_invoice" placeholder="Mã hóa đơn" required>
+                </div>
+                <textarea id="description" placeholder="Nhập chi tiết mô tả" required></textarea>
+            </div>
+            <button class="btn" onClick="INF()">Gửi ý kiến <i class="fa-brands fa-facebook-messenger"></i>
+            </button>
+        </form>
+    </div>
+    <div id="info_display"></div>
+
+    <script>
+        function INF(){
+            var name= document.getElementById("name").value;
+            var tel= document.getElementById("tel").value;
+            var E_mail= document.getElementById("E_mail").value;
+            var customer_type= document.getElementById("customer_type").value;
+            var id_card= document.getElementById("id_card").value;
+            var id_invoice= document.getElementById("id_invoice").value;
+            var description= document.getElementById("description").value;
+            var currentTime = new Date();
+            var timeString = currentTime.toLocaleString();
+
+            var feedbackInfo = {
+                name: name,
+                tel: tel,
+                E_mail: E_mail,
+                customer_type: customer_type,
+                id_card: id_card,
+                id_invoice: id_invoice,
+                description: description,
+                time: timeString,
+            };
+
+            var infoHTML = "<h2>ĐÁNH GIÁ</h2>";
+            infoHTML += "<p><strong>@</strong> " + feedbackInfo.name + "</p>";
+            infoHTML += feedbackInfo.time + "</p>";
+            infoHTML += "<p><strong>Số điện thoại:</strong> " + feedbackInfo.tel + "</p>";
+            infoHTML += "<p><strong>Email:</strong> " + feedbackInfo.E_mail + "</p>";
+            infoHTML += "<p><strong>Loại khách hàng:</strong> " + feedbackInfo.customer_type + "</p>";
+            infoHTML += "<p><strong>Mã thẻ:</strong> " + feedbackInfo.id_card + "</p>";
+            infoHTML += "<p><strong>Mã hóa đơn:</strong> " + feedbackInfo.id_invoice + "</p>";
+            infoHTML += "<p><strong>Nội dung góp ý: </strong>" + feedbackInfo.description + "</p>";
+            
+            document.getElementById("info_display").innerHTML = infoHTML;
+        }
+    </script>
+<!--Bài 3-->
+<footer>
+    <div class="container3">
+        <div class="column">
+            <h3>KHOA HỌC VÀ KỸ THUẬT THÔNG TIN</h3>
+            <p>Đào tạo chuyên ngành Công nghệ thông tin...</p>
+        </div>
+        <div class="column">
+            <h3>LIÊN KẾT</h3>
+            <ul>
+                <li>Website trường</li>
+                <li>Bộ môn Di động và CN Web</li>
+                <li>Bộ môn Khoa học Dữ liệu</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>MẠNG XÃ HỘI</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="copyright">
+        &copy; Bản quyền thuộc Khoa Khoa học và Kỹ thuật Thông tin.
+    </div>
+</footer>
+</body>
+</html>
