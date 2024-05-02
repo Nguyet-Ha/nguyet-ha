@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 2</title>
+    <link rel="stylesheet" href="TH02.Bài2.style.css">
+    <script src="https://kit.fontawesome.com/c1eca7f8b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="tieude">
+        <h1>ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h1>
+        <p>Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng Việt có dấu</p>
+        <p>Các đóng góp ý kiến nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)</p>    
+    </div>
+    <div class="container" >
+    <form action="#" method="post">
+        <div class="input-group">
+        <div class="container2">
+            <input type="text" id="name" placeholder="Họ và Tên"required>
+            <input type="tel" id="tel" placeholder="Số điện thoại"required>
+            <input type="email" id="E_mail" placeholder="Email"required>
+            <select id="customer_type" required>
+                <option value="" disabled selected>Chọn loại khách hàng</option>
+                <option value="VVIP">VVIP</option>
+                <option value="Regular">Regular</option>
+                <option value="New">New</option>
+            </select>
+            <input type="text" id="id_card" placeholder="Mã thẻ"required>
+            <input type="text" id="id_invoice" placeholder="Mã hóa đơn"required>
+        </div>
+    <textarea id="description" placeholder="Nhập chi tiết mô tả" required></textarea>
+    </div>
+    <button class="btn" onClick="INF()">Gửi ý kiến <i class="fa-brands fa-facebook-messenger"></i>
+    </button>
+</form>
+</div>
+<script>
+    function INF(){
+       var name= document.getElementById("name").value;
+       var tel= document.getElementById("tel").value;
+       var E_mail= document.getElementById("E_mail").value;
+       var customer_type= document.getElementById("customer_type").value;
+       var id_card= document.getElementById("id_card").value;
+       var id_invoice= document.getElementById("id_invoice").value;
+       var descrition= document.getElementById("description").value;
+       var FB = {
+           name:name,
+           tel:tel,
+           E_mail:E_mail,
+           customer_type:customer_type,
+           id_card:id_card,
+           id_invoice:id_invoice,
+           description:descrition 
+       }
+       alert("Họ và tên: "+ FB.name + "\n" + "Số điện thoại: " +FB.tel + "\n" + "E-mail: " +FB.E_mail + "\n" + 
+       "Loại KH:" +FB.customer_type + "\n" + "Mã thẻ: "+ FB.id_card + "\n" + "Mã hóa đơn: "+FB.id_invoice + "\n" + 
+       "Nội dung góp ý:" +"\n"+FB.description);
+    }
+</script>
+</body>
+</html>
